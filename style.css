@@ -1,70 +1,64 @@
-/* Reset básico para remover margens e paddings */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Corpo do site */
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
+  background-color: #f9f9f9;
   color: #333;
-  background-color: #f4f4f4;
+  transition: background-color 0.3s, color 0.3s;
 }
 
+/* Cabeçalho */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
   background-color: #333;
   color: #fff;
-  position: relative;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #logo {
-  width: 150px;
+  width: 120px;
 }
 
 #botao-tema {
+  padding: 10px;
   background-color: #ff6347;
-  color: #fff;
   border: none;
-  padding: 10px 15px;
+  color: #fff;
   cursor: pointer;
-  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
+#botao-tema:hover {
+  background-color: #ff4500;
+}
+
+/* Pop-up */
 #popup-horario {
-  background-color: #ff6347;
+  background-color: #444;
   color: #fff;
-  padding: 10px;
+  padding: 15px;
   text-align: center;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-  display: none; /* Começa oculto */
-}
-
-#popup-horario p {
-  font-size: 18px;
-}
-
-#popup-horario button {
-  background: none;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
+  display: none;
 }
 
 /* Carrossel */
 #carrossel {
-  position: relative;
   overflow: hidden;
   width: 100%;
-  height: 300px;
+  max-height: 300px;
   margin-top: 20px;
 }
 
@@ -75,28 +69,20 @@ header {
 
 #carrossel img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
 }
 
-/* Seções principais */
+/* Seções */
 section {
   padding: 40px 20px;
+  text-align: center;
 }
 
 h2 {
+  margin-bottom: 20px;
   font-size: 2em;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-#sobre-nos p,
-#servicos ul,
-#faq p {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: justify;
-  color: #555;
+  color: #444;
 }
 
 /* Galeria */
@@ -110,112 +96,47 @@ h2 {
 .galeria img {
   width: 200px;
   height: 150px;
-  object-fit: cover;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Formulários */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 400px;
-  margin: 20px auto;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"],
-textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-button {
-  padding: 10px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-button[type="submit"] {
-  background-color: #333;
-  color: #fff;
-}
-
-button[type="submit"]:hover {
-  background-color: #555;
+/* FAQ */
+#faq p {
+  margin: 10px 0;
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Newsletter */
 #newsletter {
   background-color: #ff6347;
   color: #fff;
+  padding: 20px;
   text-align: center;
-  padding: 30px 20px;
 }
 
 #newsletter input[type="email"] {
-  max-width: 300px;
-  margin: 0 auto;
-  display: block;
   padding: 10px;
+  margin-right: 10px;
   border: none;
   border-radius: 5px;
+  font-size: 16px;
 }
 
 #newsletter button {
-  background-color: #333;
-  color: #fff;
-  border: none;
   padding: 10px 20px;
-  border-radius: 5px;
+  background-color: #333;
+  border: none;
+  color: #fff;
   cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
 #newsletter button:hover {
   background-color: #555;
-}
-
-/* Tema claro e escuro */
-body.tema-escuro {
-  background-color: #1a1a1a;
-  color: #ccc;
-}
-
-body.tema-escuro header {
-  background-color: #222;
-}
-
-body.tema-escuro #popup-horario {
-  background-color: #444;
-}
-
-body.tema-escuro #botao-tema {
-  background-color: #555;
-  color: #fff;
-}
-
-body.tema-escuro h2 {
-  color: #ccc;
-}
-
-body.tema-escuro #newsletter {
-  background-color: #333;
-}
-
-body.tema-escuro button[type="submit"],
-body.tema-escuro #newsletter button {
-  background-color: #444;
-}
-
-body.tema-escuro button[type="submit"]:hover,
-body.tema-escuro #newsletter button:hover {
-  background-color: #666;
 }
 
 /* Mapa */
@@ -224,35 +145,22 @@ body.tema-escuro #newsletter button:hover {
   height: 300px;
   border: none;
   border-radius: 8px;
-  margin-top: 20px;
 }
 
-/* Layout Responsivo */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+/* Tema Escuro */
+body.tema-escuro {
+  background-color: #222;
+  color: #ccc;
+}
 
-  #carrossel {
-    height: 200px;
-  }
+.tema-escuro header {
+  background-color: #111;
+}
 
-  #carrossel img {
-    height: 100%;
-  }
+.tema-escuro #newsletter {
+  background-color: #333;
+}
 
-  .galeria img {
-    width: 100%;
-    height: auto;
-  }
-
-  form {
-    width: 90%;
-  }
-
-  h2 {
-    font-size: 1.8em;
-  }
+.tema-escuro #botao-tema {
+  background-color: #555;
 }
