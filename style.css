@@ -58,9 +58,9 @@ header {
 #carrossel {
   overflow: auto;
   width: 250px;
-  height: 350px;
+  height: 400px;
   max-height: 400px;
-  margin-top: 400px;
+  margin-top: 20px;
 }
 
 #carrossel .slides {
@@ -69,9 +69,8 @@ header {
 }
 
 #carrossel img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  width: 400px;
+  object-fit: none;
 }
 
 /* Seções */
