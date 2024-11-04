@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antunes Motorsport</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Pop-up para horário de funcionamento -->
+  <div id="popup-horario">
+    <p id="status-oficina"></p>
+    <button onclick="fecharPopup()">Fechar</button>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <img src="logo.png" alt="Antunes Motorsport Logo" id="logo">
+    <button onclick="alternarTema()" id="botao-tema">Alterar Tema</button>
+  </header>
+
+  <!-- Carrossel -->
+  <section id="carrossel">
+    <div class="slides">
+      <img src="imagem1.jpg" alt="Serviço 1">
+      <img src="imagem2.jpg" alt="Serviço 2">
+      <img src="imagem3.jpg" alt="Serviço 3">
+      <img src="imagem4.jpg" alt="Serviço 4">
+      <img src="imagem5.jpg" alt="Serviço 5">
+    </div>
+  </section>
+
+  <!-- Seções Principais -->
+  <section id="sobre-nos">
+    <h2>Sobre Nós</h2>
+    <p>A Antunes Motorsport é uma oficina mecânica especializada...</p>
+  </section>
+
+  <section id="servicos">
+    <h2>Serviços</h2>
+    <ul>
+      <li>Reparos e manutenção</li>
+      <li>Alinhamento e balanceamento</li>
+      <li>Troca de óleo</li>
+      <!-- Outros serviços -->
+    </ul>
+  </section>
+
+  <section id="galeria">
+    <h2>Galeria</h2>
+    <div class="galeria">
+      <img src="foto1.jpg" alt="Foto da oficina">
+      <img src="foto2.jpg" alt="Foto do serviço">
+      <!-- Mais imagens -->
+    </div>
+  </section>
+
+  <section id="faq">
+    <h2>FAQ</h2>
+    <p>Perguntas frequentes sobre nossos serviços...</p>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato">
+    <h2>Contato</h2>
+    <form action="contato.php" method="POST">
+      <input type="text" name="nome" placeholder="Seu Nome">
+      <input type="email" name="email" placeholder="Seu E-mail">
+      <textarea name="mensagem" placeholder="Sua Mensagem"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <div id="mapa">
+      <!-- Google Maps iframe -->
+      <iframe src="https://maps.google.com/maps?q=Guarapuava%20PR,%20Bairro%20Dos%20Estados,%20Rua%20Brigadeiro%20Rocha%203111&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section id="newsletter">
+    <h2>Receba Nossas Novidades</h2>
+    <form action="newsletter.php" method="POST">
+      <input type="email" name="email" placeholder="Seu E-mail">
+      <button type="submit">Cadastrar</button>
+    </form>
+  </section>
+
+  <!-- Login e Cadastro -->
+  <section id="login-cadastro">
+    <h2>Login</h2>
+    <form action="login.php" method="POST">
+      <input type="email" name="email" placeholder="E-mail">
+      <input type="password" name="senha" placeholder="Senha">
+      <button type="submit">Entrar</button>
+    </form>
+
+    <h2>Cadastro</h2>
+    <form action="cadastro.php" method="POST">
+      <input type="email" name="email" placeholder="E-mail">
+      <input type="password" name="senha" placeholder="Senha">
+      <button type="submit">Cadastrar</button>
+    </form>
+  </section>
+
+</body>
+</html>
