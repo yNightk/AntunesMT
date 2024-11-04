@@ -5,103 +5,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Antunes Motorsport</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
 </head>
 <body>
-
-  <!-- Pop-up para horário de funcionamento -->
+  
+  <!-- Pop-up para status da oficina -->
   <div id="popup-horario">
-    <p id="status-oficina"></p>
+    <p>A oficina está aberta!</p>
     <button onclick="fecharPopup()">Fechar</button>
   </div>
 
-  <!-- Header -->
+  <!-- Cabeçalho -->
   <header>
-    <img src="logo.png" alt="Antunes Motorsport Logo" id="logo">
-    <button onclick="alternarTema()" id="botao-tema">Alterar Tema</button>
+    <img src="logo.png" alt="Antunes Motorsport" id="logo">
+    <button id="botao-tema" onclick="alternarTema()">Alterar Tema</button>
   </header>
 
-  <!-- Carrossel -->
+  <!-- Carrossel de imagens -->
   <section id="carrossel">
     <div class="slides">
-      <img src="imagem1.jpg" alt="Serviço 1">
-      <img src="imagem2.jpg" alt="Serviço 2">
-      <img src="imagem3.jpg" alt="Serviço 3">
-      <img src="imagem4.jpg" alt="Serviço 4">
-      <img src="imagem5.jpg" alt="Serviço 5">
+      <img src="carro1.jpg" alt="Carro 1">
+      <img src="carro2.jpg" alt="Carro 2">
+      <img src="carro3.jpg" alt="Carro 3">
+      <img src="carro4.jpg" alt="Carro 4">
+      <img src="carro5.jpg" alt="Carro 5">
     </div>
   </section>
 
-  <!-- Seções Principais -->
+  <!-- Sobre Nós -->
   <section id="sobre-nos">
     <h2>Sobre Nós</h2>
-    <p>A Antunes Motorsport é uma oficina mecânica especializada...</p>
+    <p>A Antunes Motorsport é especializada em serviços de alta qualidade para manutenção e reparos automotivos. Estamos localizados em Guarapuava e prontos para cuidar do seu veículo.</p>
   </section>
 
+  <!-- Serviços -->
   <section id="servicos">
     <h2>Serviços</h2>
     <ul>
-      <li>Reparos e manutenção</li>
-      <li>Alinhamento e balanceamento</li>
-      <li>Troca de óleo</li>
-      <!-- Outros serviços -->
+      <li>Manutenção Preventiva</li>
+      <li>Troca de Óleo</li>
+      <li>Alinhamento e Balanceamento</li>
+      <li>Revisão Completa</li>
+      <li>Diagnóstico e Reparo de Freios</li>
     </ul>
   </section>
 
+  <!-- Galeria de Imagens -->
   <section id="galeria">
     <h2>Galeria</h2>
     <div class="galeria">
-      <img src="foto1.jpg" alt="Foto da oficina">
-      <img src="foto2.jpg" alt="Foto do serviço">
-      <!-- Mais imagens -->
+      <img src="servico1.jpg" alt="Serviço 1">
+      <img src="servico2.jpg" alt="Serviço 2">
+      <img src="servico3.jpg" alt="Serviço 3">
+      <img src="servico4.jpg" alt="Serviço 4">
+      <img src="servico5.jpg" alt="Serviço 5">
     </div>
   </section>
 
+  <!-- FAQ -->
   <section id="faq">
     <h2>FAQ</h2>
-    <p>Perguntas frequentes sobre nossos serviços...</p>
-  </section>
-
-  <!-- Contato -->
-  <section id="contato">
-    <h2>Contato</h2>
-    <form action="contato.php" method="POST">
-      <input type="text" name="nome" placeholder="Seu Nome">
-      <input type="email" name="email" placeholder="Seu E-mail">
-      <textarea name="mensagem" placeholder="Sua Mensagem"></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-    <div id="mapa">
-      <!-- Google Maps iframe -->
-      <iframe src="https://maps.google.com/maps?q=Guarapuava%20PR,%20Bairro%20Dos%20Estados,%20Rua%20Brigadeiro%20Rocha%203111&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
-    </div>
+    <p><strong>Qual o horário de funcionamento?</strong> Segunda a Sexta, das 8h às 18h.</p>
+    <p><strong>Preciso agendar?</strong> Sim, recomendamos agendamento prévio para melhor atendimento.</p>
   </section>
 
   <!-- Newsletter -->
   <section id="newsletter">
-    <h2>Receba Nossas Novidades</h2>
-    <form action="newsletter.php" method="POST">
-      <input type="email" name="email" placeholder="Seu E-mail">
-      <button type="submit">Cadastrar</button>
+    <h2>Assine nossa Newsletter</h2>
+    <p>Receba dicas e novidades da Antunes Motorsport diretamente no seu e-mail.</p>
+    <form>
+      <input type="email" placeholder="Digite seu e-mail">
+      <button type="submit">Inscrever-se</button>
     </form>
   </section>
 
-  <!-- Login e Cadastro -->
-  <section id="login-cadastro">
-    <h2>Login</h2>
-    <form action="login.php" method="POST">
-      <input type="email" name="email" placeholder="E-mail">
-      <input type="password" name="senha" placeholder="Senha">
-      <button type="submit">Entrar</button>
-    </form>
-
-    <h2>Cadastro</h2>
-    <form action="cadastro.php" method="POST">
-      <input type="email" name="email" placeholder="E-mail">
-      <input type="password" name="senha" placeholder="Senha">
-      <button type="submit">Cadastrar</button>
-    </form>
+  <!-- Mapa de Localização -->
+  <section id="mapa">
+    <h2>Onde Estamos</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.472670923788!2d-51.4679644!3d-25.385942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ef3575ecf7d74d%3A0x89f76e1dc98d0a2d!2sR.%20Brigadeiro%20Rocha%2C%203111%20-%20Dos%20Estados%2C%20Guarapuava%20-%20PR%2C%2085020-190!5e0!3m2!1sen!2sbr!4v1600000000000!5m2!1sen!2sbr" allowfullscreen></iframe>
   </section>
 
+  <script src="script.js"></script>
 </body>
 </html>
